@@ -3,5 +3,6 @@ from .views import Home, DetailedIdeaView, AddPostView, UpdatePostView, DeletePo
 
 urlpatterns = [
     path('', Home.as_view(), name="home"),
-    
+    path('detailidea/<int:pk>', DetailedIdeaView.as_view(), name='detailidea'),
+   
 ]

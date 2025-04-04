@@ -10,3 +10,8 @@ class Home(ListView):
     ordering = ['-posted_date']
 
 
+class DetailedIdeaView(DetailView):
+    model = Post
+    template_name = 'detailed_idea.html'
+
+
