@@ -20,3 +20,13 @@ class AddPostView(CreateView):
     form_class = PostForm
     template_name = 'add_post.html'
 
+class UpdatePostView(UpdateView):
+    model = Post
+    form_class = EditForm
+    template_name = 'update_post.html'
+    #fields = ['title', 'title_tag', 'body']
+
+class DeletePostView(DeleteView):
+    model = Post
+    template_name = 'delete-post.html'
+    success_url = reverse_lazy('home')
