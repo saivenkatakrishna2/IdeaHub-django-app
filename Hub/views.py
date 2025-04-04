@@ -15,3 +15,8 @@ class DetailedIdeaView(DetailView):
     template_name = 'detailed_idea.html'
 
 
+class AddPostView(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+
